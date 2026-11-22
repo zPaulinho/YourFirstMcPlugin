@@ -4,15 +4,24 @@ main: p.zsanchez.Plugin1
 description: Primer plugin de zPaulinho
 api-version: 26.3
 
+# Comandos que tendrá el plugin
 commands:
   plugin1:
+    # Descripción del comando
     description: "Es el primer comando de Plugin1"
+    # Uso correcto del comando
     usage: "/plugin1 <arg>"
-    aliases: [cmd, command]
+    # Un alias para poder ejecutarlo de otra manera
+    aliases: [p1]
+    # Permiso que usara el comando
     permission: plugin1.firstpermision
+    # Mensaje de cuando no tienes el permiso
     permission-message: "No tienes permisos opara ajecutar este comando"
 
+# Permisos del plugin
 permissions:
+  # Nombre del permiso
   plugin1.firstpermision:
     description: "Este es el primer permiso del plugin"
+    # Quien lo tiene por defecto, puede ser (true para todos los jugadores ,false para nadie, op solo administradores del server, not op todos excepto administradores
     default: op
