@@ -1,0 +1,18 @@
+name: Plugin1
+version: '1.0-SNAPSHOT'
+main: p.zsanchez.Plugin1
+description: Primer plugin de zPaulinho
+api-version: 26.3
+
+commands:
+  plugin1:
+    description: "Es el primer comando de Plugin1"
+    usage: "/plugin1 <arg>"
+    aliases: [cmd, command]
+    permission: plugin1.firstpermision
+    permission-message: "No tienes permisos opara ajecutar este comando"
+
+permissions:
+  plugin1.firstpermision:
+    description: "Este es el primer permiso del plugin"
+    default: op
