@@ -1,17 +1,18 @@
-
 package p.zsanchez;
 
-import com.mojang.brigadier.builder.LiteralArgumentBuilder;
+import com.mojang.brigadier.tree.LiteralCommandNode;
 import io.papermc.paper.command.brigadier.CommandSourceStack;
 import io.papermc.paper.command.brigadier.Commands;
 
 public class PluginCommands {
 
-    public static LiteralArgumentBuilder<CommandSourceStack> create() {
+    public static LiteralCommandNode<CommandSourceStack> createCommand() {
 
-        LiteralArgumentBuilder<CommandSourceStack> root =
-                Commands.literal("plugin1");
+        // Comando principal
+        return Commands.literal("plugin1")
+                .then(Commands.literal("help"))
+                .then(Commands.literal("reload"))
+                .build();
 
-        return root;
     }
 }
