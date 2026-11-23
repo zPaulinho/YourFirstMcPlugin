@@ -4,6 +4,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Plugin1 extends JavaPlugin {
 
+    PluginCommands commands = new PluginCommands();
+
     @Override
     public void onEnable(){
         // Código al íniciar el plugin
